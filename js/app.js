@@ -45,6 +45,7 @@ $(document).ready(function() {
 	 			$('.ryu-ready').hide();
 	 			$('.ryu-throwing').hide();
 	 			$('.ryu-cool').show();
+	 			$('#theme-song')[0].pause();
 	 			$('#cool-song')[0].play();
 	 		}
 	 	});
@@ -55,7 +56,7 @@ $(document).ready(function() {
 	 			$('.ryu-ready').hide();
 	 			$('.ryu-throwing').hide();
 	 			$('.ryu-cool').hide();
-	 			$('#theme-song')[0].pause();
+	 			$('#theme-song')[0].play();
 	 			$('#cool-song')[0].pause();
 	 		}
 	 	});
