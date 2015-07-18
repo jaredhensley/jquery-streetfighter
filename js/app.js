@@ -22,18 +22,6 @@ $(document).ready(function() {
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show().animate(
-<<<<<<< HEAD
-  		{'left': '1020px'},
-  		700,
-  		function() {
-    		$(this).hide();
-    		$(this).css('left', '520px');
-  		}
-			);
-	});
-	//third event, click mouse and ryu throws and hadouken appears, sound as well
-	
-=======
   																	{'left': '1020px'},
   																	700,
   																	function() {
@@ -44,7 +32,6 @@ $(document).ready(function() {
 
 	//third event, click mouse and ryu throws and hadouken appears
 
->>>>>>> master
 	$('.ryu').mouseup(function(){
 		$('.ryu-throwing').hide();
 		$('.ryu-ready').show();
@@ -58,6 +45,7 @@ $(document).ready(function() {
 	 			$('.ryu-ready').hide();
 	 			$('.ryu-throwing').hide();
 	 			$('.ryu-cool').show();
+	 			$('#theme-song')[0].pause();
 	 			$('#cool-song')[0].play();
 	 		}
 	 	});
