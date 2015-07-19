@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
 	playThemeSong();
+	doIntro();
 	$(".ryu").mouseenter(function () {
 		$(".ryu-still").hide();
 		$(".ryu-ready").show();
@@ -22,25 +23,24 @@ $(document).ready(function() {
 		$('.ryu-ready').hide();
 		$('.ryu-throwing').show();
 		$('.hadouken').finish().show().animate(
-  																	{'left': '1020px'},
-  																	400,
-  																	function() {
-    																		$(this).hide();
-    																		$(this).css('left', '520px');
-  																	});
+  			{'left': '1020px'},
+  			400,
+  			function() {
+    	  $(this).hide();
+    		$(this).css('left', '520px');
+  			});
 	});
 
 	//third event, click mouse and ryu throws and hadouken appears
 
 	$('.ryu').mouseup(function(){
 		$('.ryu-throwing').hide();
-		$('.ryu-ready').show();xxxx
+		$('.ryu-ready').show();
 	});
 
 
 	 $(document).on('keydown', function(){
 	 		if (event.which == 88) {
-	 			
 	 			$('.ryu-still').hide();
 	 			$('.ryu-ready').hide();
 	 			$('.ryu-throwing').hide();
@@ -81,4 +81,20 @@ function playCoolSong() {
 	$('#cool-song')[0].volume = 0.5;
   $('#cool-song')[0].load();
   $('#cool-song')[0].play();
+}
+
+function doIntro() {
+  $('.sf-logo').fadeIn(3500, function() {
+    $(this).fadeOut(1000, function() {
+      $('.brought-by').fadeIn(1500, function() {
+        $(this).fadeOut(1000, function() {
+          $('.jquery-logo').fadeIn(1500, function() {
+            $(this).fadeOut(1500, function() {
+              $('.how-to').fadeIn(1000);
+            });
+          })
+        })
+      })
+    })
+  })
 }

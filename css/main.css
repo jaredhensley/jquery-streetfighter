@@ -14,7 +14,6 @@ body {
 	position:relative;
 	background-size: relative;
 	background-image: url(../images/background3.jpg);
-	background-repeat: no-repeat;
 	border-right: 5px solid black;
 }
 
@@ -23,6 +22,7 @@ body {
 	width: 659px;
 	height: 494px;
 }
+
 
 .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
 	width:659px;
@@ -74,7 +74,6 @@ body {
 h1 {
 	color:white;
 	text-align:center;
-	font-size: 2em;
 	font-family: 'crimes';
 	font-weight: 200;
 }
@@ -84,6 +83,45 @@ h2 {
 	text-align:center;
 	font-family: 'crimes';
 	font-weight: 200;
+}
+
+.text-content{
+	position: absolute;
+	left: 650px;
+	height: 425px;
+	width: 600px;
+	padding-top: 75px;
+}
+
+
+.sf-logo {
+	background-image: url('../images/sf-logo.png');
+	width: 682px;
+	height: 314px;
+	display: none;
+}
+
+.jquery-logo {
+	background-image: url('../images/jquery-logo.png');
+	width: 500px;
+	height: 172px;
+	display: none;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.brought-by, .how-to {
+	display: none;
+	color: red;
+	font-family: comical;
+	font-size: 1.5em;
+	width: 600px;
+}
+
+.brought-by {
+	text-align: center;
+	margin-top: 100px;
 }
 
 @font-face {
