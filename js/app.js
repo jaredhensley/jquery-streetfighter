@@ -5,7 +5,7 @@ $(document).ready(function() {
 	doIntro();
 		$(".ryu").mouseenter(function () {
 		$(".ryu-still").hide();
-				$(".ryu-ready").hide();
+		$(".ryu-ready").hide();
 		$('.ryu-still').hide();
 		$('.ryu-ready').hide();
 		$('.ryu-cool').hide();
@@ -19,7 +19,9 @@ $(document).ready(function() {
 		$('.ryu-still').hide();
 		$('.ryu-ready').hide();
 		$('.ryu-cool').hide();
+		$('.ryu-throwing').hide();
 		$(".ryu-still").show();
+		$('.hadouken').hide();
 	});
 
 	//second event, move mouse away and ryu rests
@@ -37,13 +39,14 @@ $(document).ready(function() {
     	  $(this).hide();
     		$(this).css('left', '520px');
   			});
+
 	});
 
 	//third event, click mouse and ryu throws and hadouken appears
 
-	$('.ryu').mouseup(function(){
+	$(document).mouseup(function(){
 		$('.ryu-throwing').hide();
-				$('.ryu-still').hide();
+		$('.ryu-still').hide();
 		$('.ryu-ready').hide();
 		$('.ryu-cool').hide();
 		$('.ryu-ready').show();
