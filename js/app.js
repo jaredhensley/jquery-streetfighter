@@ -1,30 +1,25 @@
-
+//mouse hovers ryu div and ryu takes ready state.
 
 $(document).ready(function() {
 	playThemeSong();
 	doIntro();
 		$(".ryu").mouseenter(function () {
-		$(".ryu-still").hide();
 		$(".ryu-ready").hide();
 		$('.ryu-still').hide();
-		$('.ryu-ready').hide();
 		$('.ryu-cool').hide();
 		$(".ryu-ready").show();
 	});
 
-	//first event, mouse hovers and ryu is rdy
+	// Mouse leaves Ryu div and ryu rests
 
 	$('.ryu').mouseleave(function () {
 		$(".ryu-ready").hide();
-		$('.ryu-still').hide();
-		$('.ryu-ready').hide();
 		$('.ryu-cool').hide();
 		$('.ryu-throwing').hide();
 		$(".ryu-still").show();
-		$('.hadouken').hide();
 	});
 
-	//second event, move mouse away and ryu rests
+	//Mouse down, ryu throws and hadouken appears
 
 	$('.ryu').mousedown(function() {
 		playHadouken();
@@ -39,19 +34,18 @@ $(document).ready(function() {
     	  $(this).hide();
     		$(this).css('left', '520px');
   			});
-
 	});
 
-	//third event, click mouse and ryu throws and hadouken appears
+	//Mouse up, ryu returns to ready state
 
 	$(document).mouseup(function(){
 		$('.ryu-throwing').hide();
 		$('.ryu-still').hide();
-		$('.ryu-ready').hide();
 		$('.ryu-cool').hide();
 		$('.ryu-ready').show();
 	});
 
+	//hold down key, ryu takes cool state and cool music
 
 	 $(document).on('keydown', function(){
 	 		if (event.which == 88) {
@@ -64,9 +58,10 @@ $(document).ready(function() {
 	 		}
 	 	});
 
+	 //key up, cool music stops and ryu returns to still state
+
 	  $(document).on('keyup', function(){
 	 		if (event.which == 88) {
-	 			$('.ryu-still').show();
 	 			$('.ryu-ready').hide();
 	 			$('.ryu-throwing').hide();
 	 			$('.ryu-cool').hide();
@@ -74,11 +69,11 @@ $(document).ready(function() {
 	 			$('#theme-song')[0].play();
 	 			$('#cool-song')[0].pause();
 	 		}
-	 	});
-
-		
+	 	});	
 
 }); //end $(document)
+
+// audio functions
 
 function playHadouken() {
   $('#hadouken-sound')[0].volume = 0.5;
@@ -98,18 +93,16 @@ function playCoolSong() {
   $('#cool-song')[0].play();
 }
 
+// banners fade in/out
+
 function doIntro() {
   $('.sf-logo').fadeIn(3500, function() {
     $(this).fadeOut(1000, function() {
-      $('.brought-by').fadeIn(1500, function() {
-        $(this).fadeOut(1000, function() {
-          $('.jquery-logo').fadeIn(1500, function() {
-            $(this).fadeOut(1500, function() {
-              $('.how-to').fadeIn(1000);
-            });
-          })
+      $('.jquery-logo').fadeIn(1500, function() {
+        $(this).fadeOut(1500, function() {
+          $('.how-to').fadeIn(1000);
+          });
         })
-      })
-    })
-  })
-}
+    	})
+  	})
+}	
