@@ -10,9 +10,9 @@ body {
 	margin-top:110px;
 	padding-left: 100px;
 	min-height:500px;
-	min-width:100%;
+	min-width:1200px;
 	position:relative;
-	background-size: relative;
+	
 	background-image: url(../images/background3.jpg);
 	border-right: 5px solid black;
 }
